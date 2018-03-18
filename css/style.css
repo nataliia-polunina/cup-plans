@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+@font-face {
+	font-family: "Miso"; 
+	src: url("../fonts/miso-regular-webfont.woff"); 
+	font-style: normal; 
+	font-weight: normal; 
+}
+
+@font-face {
+	font-family: "Miso"; 
+	src: url("../fonts/miso-bold-webfont.woff"); 
+	font-style: normal; 
+	font-weight: bold; 
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+	
+body{
+	background-color: #fdde7e;
+}
+
+.container {
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 3px;
+	width: 360px;
+	height: 440px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	text-decoration: none;
+	padding: 20px;
+	transition: all .25s;
+}
+
+.card--big {
+	width: 360px;
+	height: 500px;
+}
+
+.card__price::before {
+	content: attr(data-currency);
+}	
+
+.card__price {
+	font: 700 70px Miso, sans-serif;
+	color: #02995b;
+}
+
+.card__title {
+	font: 400 56px Miso, sans-serif;
+	margin: 0;
+	color: #333;
+}
+
+.card__text {
+	font: 20px Lato, sans-serif;
+	color: #333;
+	max-width: 160px;
+	margin: 0;
+	text-align: center;
+}
+
+.card:hover,
+.card:active {
+	transform: scale(1.05);
+	box-shadow: 0 0 20px #999;
+}
